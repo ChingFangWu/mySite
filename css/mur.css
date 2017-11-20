@@ -1,0 +1,82 @@
+/*section_murmur  */
+section#section_murmur{
+	height: 30rem ;
+	background-color:#F2AE72;
+	position: relative;
+}
+section#section_murmur #sheepmur{
+	position: absolute;
+	height: 300px;
+	left: 2%;
+	top:9rem;
+}
+section#section_murmur #textzone{
+	margin-top: 30px;
+    margin-left: 50px;
+    position: relative;
+    
+  
+}
+section#section_murmur #inputtext{
+    width: 250px;
+    height: 30px;
+	border: solid 3px #588C73;
+	border-radius: 5px;
+	padding: 5px;
+	background: transparent;
+  
+  
+}
+section#section_murmur #btn{
+	margin: 5px 10px;
+	padding: 10px;
+	width: 80px;
+	height: 30px;
+	line-height: 5px;
+	background-color: #588C73;
+	border: none;
+	border-radius: 5px;
+	color: #ececec;
+	font-weight: 500;
+}
+section#section_murmur #btn:hover,section#section_murmur #btn:active{
+	background-color: #D96459;
+}
+section#section_murmur .showlist{
+	position: absolute;
+	top: 120%;
+	width: 90%;
+	height: 400%;
+  list-style: none;
+  border: solid 3px #588C73;
+  border-radius: 5px;
+ padding: 5px;
+ margin: 5px;
+  overflow: auto;
+  
+}
+section#section_murmur .showlist a{
+  text-decoration: none; 
+  color:#594a38;
+  font-size: 16px;
+  border: solid 1px #588C73;
+  
+  padding: 0 5px;
+}
+section#section_murmur .showlist li{
+  padding: 5px;
+  /*float:left;*/
+
+  
+}
+section#section_murmur .showlist li span{
+  padding: 10px;
+  color:#555;
+  font-weight: 600;
+} 
+section#section_murmur .grass{
+	position: absolute;
+	top: 89%;
+	right:-10px;
+	z-index: 10;
+}
