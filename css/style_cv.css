@@ -70,6 +70,7 @@ a {
 .resume .left .list .icon h3 {
   display: flex;
   justify-content: center;
+
 }
 .resume .left .list .padtop {
   margin-top: 50px;
@@ -165,7 +166,7 @@ a {
   background-color: #F1684E;
   overflow: hidden;
   position: relative;
-  margin: 15px;
+  margin:15px 40px;
 }
 
 .skillcircle:after {
@@ -248,6 +249,15 @@ a {
 .proglist li .bar .p70 {
   width: 70%;
 }
+.proglist li .bar .p80 {
+  width: 80%;
+}
+.proglist li .bar .p85 {
+  width: 85%;
+}
+.proglist li .bar .p100 {
+  width: 100%;
+}
 
 .expriance {
   border-bottom: solid 2px #F1684E;
@@ -259,7 +269,7 @@ a {
   display: flex;
 }
 .listwork li {
-  width: calc(100%/7 - 5px);
+  width: calc(100%/6);
   height: 1px;
   background-color: #6FA3A9;
   display: flex;
@@ -270,7 +280,7 @@ a {
 .listwork li:after {
   content: "";
   display: flex;
-  margin: -10px 106px;
+  margin: -10px 30px;
   width: 25px;
   height: 25px;
   background-color: #6FA3A9;
@@ -282,7 +292,7 @@ a {
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  margin: -15px 100px;
+  margin: -15px 25px;
   cursor: pointer;
 }
 
@@ -299,7 +309,7 @@ a {
 
 .workstory {
   flex-wrap: nowrap;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: normal;
   margin: 15px;
 }
