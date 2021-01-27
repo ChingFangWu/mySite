@@ -13,7 +13,9 @@ html, body {
   background-color: #D3E0E2;
   color: #555;
 }
-
+.dI{
+  visibility:hidden
+}
 ul {
   list-style: none;
 }
