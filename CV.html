@@ -8,10 +8,399 @@
   <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
 
       <link rel="stylesheet" href="css/style_cv.css">
+<style>
+  * {
+  font-family: 微軟正黑體;
+}
 
-   
+html, body {
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+  margin: 0px;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: none;
+  background-color: #F6F6F6;
+  color: #555;
+}
+
+ul {
+  list-style: none;
+}
+
+.bold {
+  font-weight: 900;
+}
+
+.space {
+  margin: 30px;
+}
+
+.name {
+  font-size: 30px;
+  letter-spacing: 30px;
+}
+
+a {
+  color: #555;
+  text-decoration: none;
+}
+.mt50{
+  margin-top: 50px;
+}
+.mb50{
+  margin-bottom: 50px;
+}
+.dI{
+  visibility:hidden
+}
+.resume {
+  display: flex;
+  max-width: 950px;
+  padding: 50px;
+  margin: 0px;
+}
+.resume .left {
+  flex: 3;
+}
+.resume .left .list {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 30px;
+  padding: 10px;
+}
+.resume .left .list .icon .circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: solid 6px #F1684E;
+  position: relative;
+}
+.resume .left .list .icon .circle i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 50px;
+  color: #6FA3A9;
+}
+.resume .left .list .icon h3 {
+  display: flex;
+  justify-content: center;
+
+}
+.resume .left .list .padtop {
+  margin-top: 50px;
+}
+.resume .right {
+  flex: 9;
+}
+.resume .right .profile {
+  display: flex;
+  width: 100%;
+  border-bottom: solid 2px #F1684E;
+  margin-bottom: 0px;
+  align-items: top;
+}
+.resume .right .profile .title, .resume .right .profile .contact {
+  width: 50%;
+  padding: 20px;
+}
+.resume .right .profile .title {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: initial;
+  border-right: solid 2px #F1684E;
+  padding: 5px;
+  margin-left: 50px;
+}
+.resume .right .profile .title li {
+  padding: 5px;
+}
+.resume .right .profile .title a {
+  text-align: center;
+  margin-left: 50px;
+  padding: 10px;
+}
+.resume .right .profile .contact {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 35px;
+  margin-bottom: 10px;
+  padding: 5px;
+}
+.resume .right .profile .contact .edu, .resume .right .profile .contact .touch {
+  padding: 5px;
+  margin-left: 0px;
+  font-size: 0px;
+}
+.resume .right .profile .contact .edu li, .resume .right .profile .contact .touch li {
+  padding: 0px;
+  font-size: 14px;
+  margin-top: 8px;
+}
+.resume .right .profile .contact .edu li i, .resume .right .profile .contact .touch li i {
+  color: #6FA3A9;
+  font-size: 20px;
+  padding-right: 10px;
+}
+
+.btn {
+  border: solid 3px #6FA3A9;
+  padding: 5px 20px;
+  margin-right: 10px;
+}
+
+.fill {
+  background-color: #6FA3A9;
+}
+
+.skills {
+  border-bottom: solid 2px #F1684E;
+  margin: 10px;
+  padding: 10px;
+}
+
+.listSkill {
+  display: flex;
+  padding: 5px;
+  margin-top: 20px;
+}
+.listSkill li {
+  width: 20%;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  align-items: center;
+  text-align: center;
+}
+
+.skillcircle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #F1684E;
+  overflow: hidden;
+  position: relative;
+  margin:15px 40px;
+}
+
+.skillcircle:after {
+  content: "";
+  display: block;
+  width: calc(100% - 30px);
+  height: calc(100% - 30px);
+  background-color: #D3E0E2;
+  border-radius: 50%;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.p90, .p180, .p270, .p360, .p250 {
+  width: 50%;
+  height: 50%;
+  background-color: rgba(111, 163, 169, 0.5);
+  position: absolute;
+  top: 0;
+  left: 50%;
+}
+
+.p180 {
+  top: 50%;
+}
+
+.p270 {
+  left: 0;
+  top: 50%;
+}
+
+.p360 {
+  top: 0;
+  left: 0;
+}
+
+.program {
+  border-bottom: solid 2px #F1684E;
+  margin: 10px;
+  padding: 5px;
+}
+
+.proglist {
+  margin: 20px;
+  padding: 5px;
+}
+.proglist li {
+  margin: 15px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 800;
+  margin-left: 50px;
+}
+.proglist li .bar {
+  display: inline-flex;
+  width: 40%;
+  height: 20px;
+  border-radius: 5px;
+  border: solid 3px #F1684E;
+}
+.proglist li .bar .value {
+  width: 60%;
+  height: 100%;
+  background-color: rgba(111, 163, 169, 0.7);
+  border-radius: 3px;
+  padding: 2px;
+  box-sizing: border-box;
+}
+.proglist li .bar .p5 {
+  width: 5%;
+}
+.proglist li .bar .p40 {
+  width: 40%;
+}
+.proglist li .bar .p60 {
+  width: 60%;
+}
+.proglist li .bar .p70 {
+  width: 70%;
+}
+.proglist li .bar .p80 {
+  width: 80%;
+}
+.proglist li .bar .p85 {
+  width: 85%;
+}
+.proglist li .bar .p100 {
+  width: 100%;
+}
+
+.expriance {
+  border-bottom: solid 2px #F1684E;
+  margin: 10px;
+  padding: 10px;
+}
+
+.listwork {
+  display: flex;
+}
+.listwork li {
+  width: calc(100%/6);
+  height: 1px;
+  background-color: #6FA3A9;
+  display: flex;
+  margin: 10px;
+  position: relative;
+  margin-left: 0px;
+}
+.listwork li:after {
+  content: "";
+  display: flex;
+  margin: -10px 30px;
+  width: 25px;
+  height: 25px;
+  background-color: #6FA3A9;
+  border-radius: 50%;
+  position: absolute;
+  transition: 0.5s;
+}
+.listwork li:hover:after {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin: -15px 25px;
+  cursor: pointer;
+}
+
+.year, .workstory {
+  display: flex;
+  justify-content: space-around;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.move {
+  margin-left: 50px;
+}
+
+.workstory {
+  flex-wrap: nowrap;
+  font-size: 12px;
+  font-weight: normal;
+  margin: 15px;
+}
+.workstory li {
+  margin-top: 10px;
+  width: 20%;
+  text-align: center;
+}
+.workstory li .po {
+  margin: 5px;
+  padding: 10px;
+}
+
+.interest {
+  display: flex;
+  width: 100%;
+  text-align: center;
+  margin-top: -10px;
+}
+.interest .out, .interest .athome {
+  width: 50%;
+  padding: 30px;
+}
+.interest .out h3, .interest .athome h3 {
+  background-color: rgba(111, 163, 169, 0.5);
+  display: inline-block;
+  padding: 10px;
+  margin-left: 10px;
+}
+ .interest .athome li {
+  margin-left: -30px;
+}
+.interest .out {
+  border-right: solid 2px #F1684E;
+}
+.interest .out li {
+  margin-left: -30px;
+}
+
+.footer {
+  text-align: center;
+  margin: 50px;
+  font-size: 14px;
+  font-weight: bolder;
+  color: #666;
+}
+
+.top, .back {
+  position: fixed;
+  width: 45px;
+  height: 30px;
+  background-color: #c8c8c8;
+  text-align: center;
+  padding: 3px 3px;
+  padding-top: 10px;
+  right: 5px;
+  top: 40%;
+  z-index: 1;
+}
+.top a, .back a {
+  color: #fff;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.back {
+  left: 5px;
+  padding: 5px 10px;
+}
+</style>
   
 </head>
+
 <body>
   
 <div class="resume" id="top">
@@ -47,7 +436,7 @@
         <ul>
           <li class="bold name">吳靜芳</li>
           <li> &nbsp;Wu&nbsp;&nbsp;&nbsp;&nbsp; Ching&nbsp;&nbsp;&nbsp;&nbsp; Fang</li>
-          <li> 網頁&nbsp;| &nbsp;產品&nbsp; | &nbsp;珠寶&nbsp;|&nbsp;飾品&nbsp; |&nbsp;平面 </li>
+          <li> 網頁&nbsp;| &nbsp;產品&nbsp; | &nbsp;平面&nbsp;|&nbsp;珠寶飾品&nbsp;  </li>
         </ul>
         <div class="buttons"><a class="btn fill" href="https://www.behance.net/oldswiss" target="_blank">作品集</a><a class="btn" href="https://github.com/ChingFangWu" target="_blank">Github</a></div>
       </div>
@@ -61,7 +450,7 @@
         <ul class="touch">
           <li><i></i><span class="space"> </span></li>
           <li><i class="fa fa-envelope-o bold"> </i>&nbsp;  E-mail      <span class="space">&nbsp;&nbsp;&nbsp;oldswiss@gmail.com</span></li>
-          <li><i class="fa fa-home bold"> </i>&nbsp; Address<span class="space">&nbsp;&nbsp;新北市</span></li>
+          <li><i class="fa fa-home bold"> </i>&nbsp; Address<span class="space">&nbsp;&nbsp;新北市永和區</span></li>
         </ul>
       </div>
     </div>
@@ -128,7 +517,7 @@
             <div class="value p60"></div>
           </div>
         </li>
-        <li style="visibility:hidden;">PHP/MySQL
+        <li class="dI">PHP/MySQL
           <div class="bar">
             <div class="value p5"> </div>
           </div>
@@ -143,8 +532,8 @@
         <li>2012</li>
         <li>2013</li>
         <li>2015</li>
-        <li>2017</li>
-        <li>2018~</li>
+        <li>2018</li>
+        <li>2021~</li>
       </ul>
       <ul class="listwork">
         <li> </li>
@@ -175,19 +564,19 @@
           <hr/>
           <div class="po">資訊部 </div>網站維護管理
         </li>
-        <li>上伊美公司
-          <hr/>
-          <div class="po">電子商務    </div>上架PartTime 
-        </li>
         <li>威進國際資訊
           <hr/>
           <div class="po">架構組   </div>網頁設計/切版/平面
+        </li>
+        <li>威立達科技
+          <hr/>
+          <div class="po">管理部   </div>網頁設計/切版/平面
         </li>
       </ul>
     </div>
     <div class="interest">
       <div class="out">
-        <h3>不在家會做的事</h3>
+        <h3>疫情前</h3>
         <ul>
           <li>背包旅行</li>
           <li>運動</li>
@@ -196,16 +585,16 @@
         </ul>
       </div>
       <div class="athome">
-        <h3>在家會做的事</h3>
+        <h3>疫情後</h3>
         <ul>
           <li>線上課程</li>
-          <li>電影、影集、Ao3、漫畫</li>
-          <li>同人周邊</li>
+          <li>看美好事物</li>
+          <li>慢活</li>
           <li>挖掘興趣</li>
         </ul>
       </div>
     </div>
-    <div class="footer">©2020 Created by ChingWu</div>
+    <div class="footer">©2022 Created by ChingWu</div>
   </div>
 </div>
   
