@@ -1,24 +1,312 @@
 <!DOCTYPE html>
-<html >
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>CHING's</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  
-      <link rel="stylesheet" href="css/style_enter.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CFW'resume</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+	  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
 
-  
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+<style type="text/css">
+	@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100&family=Ubuntu:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100&family=Ubuntu:wght@300;500&display=swap');
+html,body{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Noto Sans TC', sans-serif;
+	background-color: #F1F1F1;
+	color:#1A132F;
+}
+a {
+	list-style: none;
+	text-decoration: none;
+}
+a:hover{
+	text-decoration: none;
+	cursor: pointer;
+}
+hr{
+	border-color: #1A132F;
+}
+
+.head_main{
+	display: flex;
+	padding: 30px;
+}
+.head_main>div{
+	flex:1;
+}
+.head_left{
+	display: inline-flex;
+	justify-content: flex-start;
+	align-items: center;
+
+	
+}
+.head_circle{
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	background-color: #5B7DB1;
+	margin-left: 30px;
+	margin-right: 10px;
+}
+.mid_name{
+	font-size: 24px;
+	font-weight: 600;
+}
+.career{
+margin-left: 10px;	
+align-self: center;
+
+
+}
+
+.head_right{
+	display: inline-flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.head_r_list{
+margin-top: 7px;
+margin-right: 10px;
+color: #1A132F;
+align-self: center;
+}
+.head_r_list:hover{
+	color: #5B7DB1;
+	transition-duration: 0.3s;
+	font-weight: 600;
+}
+.line{
+
+border-right: solid 1px #1A132F;	
+
+align-items: center;
+margin-right: 15px;
+
+}
+.section_body{
+	display: flex;
+}
+.section_body>div{
+	flex:1;
+}
+.profile_img{
+	width: 100%;
+	height: 500px;
+	padding: 2em;
+}
+.img-round{
+	width: 430px;
+	height: 430px;
+	border-radius: 50%;
+	margin-top: 2%;
+	margin-left: 110px;
+}
+.about{
+	width: 100%;
+	height: 500px;
+}
+.content-up{
+	margin-top: 8%;
+	width: 80%;
+}
+.content-up h1{
+	font-size: 6em;
+ font-family: 'Ubuntu', sans-serif;
+}
+.content-up h4,.content-up p{
+	padding: 5px;
+}
+.content-up h4{
+	font-weight: 600;
+}
+
+.content-down{
+	display: inline-flex;
+
+}
+.data_circle{
+	width: 140px;
+	height: 140px;
+	border-radius: 50%;
+	margin-top: 2%;
+	margin-right: 10px;
+	position: relative;
+	border: 1px solid #1A132F;
+}
+.data_circle:hover{
+	background: #F1F1F1;
+	transition-duration: 0.3s;
+}
+.circle-inner{
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
+font-size: 24px;
+font-weight: 800;
+color: #1A132F;
+}
+.c1{
+	background-color: #5B7DB1;
+}
+.c2{
+	background-color: #61A4BC;
+}
+.c3{
+	background-color: #F7E2E2;
+}
+
+
+@media (max-width: 767px){
+	.container{
+		width: 100%;
+	}
+	.head_main{padding: 5px;}
+	
+	.head_right{
+		display: none;
+	}
+	.head_left{
+	margin-top: 5%;	
+
+	justify-content: center;
+	align-items: center;
+    
+    
+}
+.head_circle{
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	background-color: #5B7DB1;
+	margin-left: 0;
+	margin-right: 2px;
+}
+.mid_name{
+	font-size: 16px;
+	font-weight: 600;
+}
+.career{
+margin-left: 10px;	
+align-self: center;
+font-size: 12px;
+
+}
+.section_body{
+    
+	flex-direction: column-reverse;
+
+}
+
+.content-up{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 8%;
+	width: 100%;
+	text-align: center;
+}
+.content-down{
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.data_circle{
+	width: 6em;
+	height: 6em;
+	border-radius: 50%;
+	margin-top: 2%;
+	margin-right: 10px;
+	position: relative;
+	border: 1px solid #1A132F;
+	
+}
+.circle-inner{
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
+font-size: .8em;
+font-weight: 800;
+color: #1A132F;
+}
+.profile_img{
+	display: flex;
+	padding: 1em;
+	justify-content: center;
+	
+}
+.img-round{
+	
+	width: 18em;
+	height: 18em;
+	border-radius: 50%;
+	margin-top: 3%;
+	margin-left: 0;
+}
+.footer{
+	display: flex;
+	justify-content: center;
+}
+}
+</style>
+
+
 </head>
-
 <body>
-  
-<div class="wrapper"><img src="https://drive.google.com/uc?export=view&amp;id=1Fp8ViScOXsJ75no9qegIihVaWSGSj4ug"/>
-  <div class="footer">©2020 Created by ChingWu</div>
-  <div class="cvbtn"> <a href="CV.html" target="_blank">CV</a></div>
-  <div class="webbtn"> <a href="website.html" target="_blank">WEB</a></div>
+<div class="container">	
+<div class="head_main ">
+	<div class="head_left">
+		<div class="head_circle"></div>
+		<div class="mid_name">Wu Ching Fang</div>
+		<div class="career">Web Designer </div>
+	</div>
+	<div class="head_right">
+	<a href="https://chingfangwu.github.io/mySite/CV.html" class="line">
+		<div class="head_r_list">Resume履歷</div></a>
+		
+	<a href="https://chingfangwu.github.io/myHugoSite/" class="line">
+		<div class="head_r_list">Works作品集</div></a>
+		
+	<a href="https://chingfangwu.github.io/myHugoSite/contact/">
+		<div class="head_r_list">Contact聯絡</div></a>
+   </div>
 </div>
-  
-  
+
+<div class="section_body">
+	<div class="profile_img">
+		<img class="img-fluid img-round" src="https://drive.google.com/uc?export=view&id=1-4_UmqpznJv3E_rDnJdATbaBwg3ksnby" alt="">
+	</div>
+	<div class="about">
+		<div class="content-up">
+			<h1>Hello</h1>
+			<h4>About Me</h4>
+			<p>從事多年設計工作，從珠寶飾品、手錶、禮品到網頁、UI、平面，若想了解更多關於我的資料，歡迎點擊以下的連結 :)</p>
+		 </div>
+		 <div class="content-down">
+		 <a href="https://chingfangwu.github.io/mySite/CV.html" class="data_circle c1"><div class="circle-inner " target="_blank">Resume</div></a>
+		 <a href="https://chingfangwu.github.io/myHugoSite/" class="data_circle c2" target="_blank"><div class="circle-inner ">Works</div></a>
+		 <a href="https://chingfangwu.github.io/myHugoSite/contact/" class="data_circle  c3" target="_blank"><div class="circle-inner">Contact</div></a>
+		 </div>
+	</div>
+</div>
+
+<hr>
+<div class="footer  text-center">
+<p>© 2022 Ching Fang Wu</p>
+</div>
+</div>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
 </body>
 </html>
