@@ -14,7 +14,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
 
 <style type="text/css">
-	@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100&family=Ubuntu:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100&family=Ubuntu:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100&family=Ubuntu:wght@300;500&display=swap');
 html,body{
 	margin: 0;
@@ -26,24 +26,43 @@ html,body{
 }
 a {
 	list-style: none;
-	text-decoration: none;
+	text-decoration: none!important;
 }
 a:hover{
 	text-decoration: none;
 	cursor: pointer;
 }
+ul{
+	list-style: none;
+}
+
 hr{
 	border-color: #1A132F;
 }
-
-.head_main{
+.hamBar{
+	display: none;
+	margin-top: 10px;
+	width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+}
+.fa-bars{
+	font-size: 30px;
+}
+.head_nav_sm{
+	display: none;
+	width: 100%;
+	height: 100%;
+	background-color: #f1f1f1;
+}
+.header{
 	display: flex;
 	padding: 30px;
 }
-.head_main>div{
-	flex:1;
-}
+
 .head_left{
+	flex:1;
 	display: inline-flex;
 	justify-content: flex-start;
 	align-items: center;
@@ -57,6 +76,7 @@ hr{
 	background-color: #5B7DB1;
 	margin-left: 30px;
 	margin-right: 10px;
+	align-items: center;
 }
 .mid_name{
 	font-size: 24px;
@@ -70,28 +90,29 @@ align-self: center;
 }
 
 .head_right{
+	flex:1;
+    margin-top: 1em;
 	display: inline-flex;
 	justify-content: flex-end;
-	align-items: center;
+	align-self: flex-end;
 }
 
-.head_r_list{
-margin-top: 7px;
-margin-right: 10px;
-color: #1A132F;
+.nav__item a{
+	color: #1A132F;
 align-self: center;
 }
-.head_r_list:hover{
+.nav__item:hover{
 	color: #5B7DB1;
 	transition-duration: 0.3s;
-	font-weight: 600;
 }
 .line{
 
 border-right: solid 1px #1A132F;	
+margin-top: 7px;
+margin-left: 10px;
+margin-right: 10px;
+align-self: center;
 
-align-items: center;
-margin-right: 15px;
 
 }
 .section_body{
@@ -118,7 +139,7 @@ margin-right: 15px;
 }
 .content-up{
 	margin-top: 8%;
-	width: 80%;
+	width: 60%;
 }
 .content-up h1{
 	font-size: 6em;
@@ -172,19 +193,51 @@ color: #1A132F;
 	.container{
 		width: 100%;
 	}
-	.head_main{padding: 5px;}
+	.header{padding: 5px;}
 	
 	.head_right{
 		display: none;
+		//改變成絕對定位
+		position: absolute;
+		right: 0;
+		left: 0;
+		bottom: 0;
+		//menu轉成直的
+		flex-direction: column;
+		transform:translateY(100%);
 	}
+	.head_nav_sm{
+		position: absolute;
+		top:8%;
+		right: 0;
+		left: 0;
+		bottom: 0;
+     flex-direction: column;
+     z-index: 99;
+     background-color: #fff;
+	}
+	.nav__item{
+		display: flex;
+		font-size: 24px;
+		 justify-content: center;
+		 align-items: center;
+		 padding-top: 50px;
+		
+		
+	}
+	.nav__item a{
+		margin-right: 20px;
+	}
+	.line{display: none;}
 	.head_left{
 	margin-top: 5%;	
 
-	justify-content: center;
-	align-items: center;
-    
-    
+	justify-content: flex-start;
+	align-items: center;    
 }
+.hamBar{
+    display: flex;
+  }
 .head_circle{
 	width: 25px;
 	height: 25px;
@@ -265,23 +318,25 @@ color: #1A132F;
 </head>
 <body>
 <div class="container">	
-<div class="head_main ">
+<div class="header ">
 	<div class="head_left">
 		<div class="head_circle"></div>
 		<div class="mid_name">Wu Ching Fang</div>
 		<div class="career">Web Designer </div>
 	</div>
-	<div class="head_right">
-	<a href="https://chingfangwu.github.io/mySite/CV.html" class="line">
-		<div class="head_r_list">Resume履歷</div></a>
-		
-	<a href="https://chingfangwu.github.io/myHugoSite/" class="line">
-		<div class="head_r_list">Works作品集</div></a>
-		
-	<a href="https://chingfangwu.github.io/myHugoSite/contact/">
-		<div class="head_r_list">Contact聯絡</div></a>
-   </div>
+	<ul class="head_right">
+		<li class="nav__item"><a href="https://chingfangwu.github.io/mySite/CV.html" >Resume履歷</a><span class="line"></span></li>
+		<li class="nav__item"><a href="https://chingfangwu.github.io/myHugoSite/" >Works作品集</a><span class="line"></span></li>
+		<li class="nav__item"><a href="https://chingfangwu.github.io/myHugoSite/contact/">Contact聯絡我</a></li>
+   </ul> 
+   <a class="hamBar" href="#"><i class="fas fa-bars"></i></a>
+
 </div>
+<ul class="head_nav_sm">
+		<li class="nav__item"><a href="https://chingfangwu.github.io/mySite/CV.html" >Resume履歷</a><span class="line"></span></li>
+		<li class="nav__item"><a href="https://chingfangwu.github.io/myHugoSite/" >Works作品集</a><span class="line"></span></li>
+		<li class="nav__item"><a href="https://chingfangwu.github.io/myHugoSite/contact/">Contact聯絡我</a></li>
+   </ul> 
 
 <div class="section_body">
 	<div class="profile_img">
@@ -306,7 +361,25 @@ color: #1A132F;
 <p>© 2022 Ching Fang Wu</p>
 </div>
 </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha512-bnIvzh6FU75ZKxp0GXLH9bewza/OIw6dLVh9ICg0gogclmYGguQJWl8U30WpbsGTqbIiAwxTsbe76DErLq5EDQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+	$( document ).ready(function() {
+ 
+
+          
+    $('.hamBar').click(function(){
+    	event.preventDefault();
+    	$('.head_nav_sm').slideToggle(600);
+    });
+    $('.head_nav_sm li a').click(function(){
+       $('head_nav_sm').slideUp(600);
+    });
+
+	});
+</script>
 </body>
 </html>
